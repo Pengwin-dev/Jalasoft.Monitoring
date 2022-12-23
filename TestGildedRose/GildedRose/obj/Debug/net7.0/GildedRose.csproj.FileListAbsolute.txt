@@ -1,0 +1,15 @@
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\bin\Debug\net7.0\GildedRose.exe
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\bin\Debug\net7.0\GildedRose.deps.json
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\bin\Debug\net7.0\GildedRose.runtimeconfig.json
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\bin\Debug\net7.0\GildedRose.dll
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\bin\Debug\net7.0\GildedRose.pdb
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\GildedRose.csproj.AssemblyReference.cache
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\GildedRose.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\GildedRose.AssemblyInfoInputs.cache
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\GildedRose.AssemblyInfo.cs
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\GildedRose.csproj.CoreCompileInputs.cache
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\GildedRose.dll
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\refint\GildedRose.dll
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\GildedRose.pdb
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\GildedRose.genruntimeconfig.cache
+C:\Users\Marco\Documents\Ruyasi\Jalasoft\Monitoring\GildedRose\TestGildedRose\GildedRose\obj\Debug\net7.0\ref\GildedRose.dll
