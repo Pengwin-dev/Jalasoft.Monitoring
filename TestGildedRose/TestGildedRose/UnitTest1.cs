@@ -143,6 +143,7 @@ namespace TestGildedRose
 
             
         }
+        [TestMethod]
         public void Test12_WhereBackstagePassReachSellinToZeroQualityBecomesZero()
         {
             Product prod = new Product("Backstage Pass", 46, 1);
