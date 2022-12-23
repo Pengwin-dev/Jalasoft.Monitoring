@@ -75,9 +75,9 @@
                     }
                 }
 
-            }
-            
-            
+     
+                        }
+       
         }
 
         private bool isValidProduct()

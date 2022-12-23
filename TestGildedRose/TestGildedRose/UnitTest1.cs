@@ -111,7 +111,7 @@ namespace TestGildedRose
 
             prod.UpdateProduct();
 
-            //the QV of Aged Brie should augment rather than decrease.
+            //the QV of Aged Brie should Increase rather than decrease.
             Assert.AreEqual(false, prod.CanBeSold);
         }
         [TestMethod]
