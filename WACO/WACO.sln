@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WACO", "WACO\WACO.csproj", "{785638F4-03D3-4CBC-AD1B-785BFAAFC2AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWACO", "TestWACO\TestWACO.csproj", "{0393DA9E-ADDB-42BB-8E26-4984EF88C17E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{785638F4-03D3-4CBC-AD1B-785BFAAFC2AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{785638F4-03D3-4CBC-AD1B-785BFAAFC2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{785638F4-03D3-4CBC-AD1B-785BFAAFC2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{785638F4-03D3-4CBC-AD1B-785BFAAFC2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0393DA9E-ADDB-42BB-8E26-4984EF88C17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0393DA9E-ADDB-42BB-8E26-4984EF88C17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0393DA9E-ADDB-42BB-8E26-4984EF88C17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0393DA9E-ADDB-42BB-8E26-4984EF88C17E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFEE707D-485C-430A-9C03-D451CF527705}
+	EndGlobalSection
+EndGlobal

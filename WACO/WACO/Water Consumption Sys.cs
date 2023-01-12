@@ -24,5 +24,17 @@ namespace WACO
                 users.Add(u);
             }
         }
+
+        public void RegisterNewLecture(int ci, double lastLecture)
+        {
+            int aux = (int)Math.Truncate(lastLecture);
+            if(lastLecture >= users.Find(e => e.Ci == ci).LitersConsumed) { 
+                users.Find(e => e.Ci == ci).LitersConsumed=aux;
+            }
+            else
+            {
+                throw new Exception("New Lecture cant be lower than previous one");
+            }
+        }
     }
 }
