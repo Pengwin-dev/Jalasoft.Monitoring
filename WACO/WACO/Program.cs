@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using WACO;
+
+WaterConsumptionSystem wcs = new WaterConsumptionSystem();
+Menu m = new Menu(wcs);
+m.Execute();
+

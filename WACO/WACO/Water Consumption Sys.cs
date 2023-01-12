@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,13 +9,14 @@ namespace WACO
 {
     public class WaterConsumptionSystem
     {
-        public List<User> users { get; set; }
+        public List<Associate> users { get; set; }
         public WaterConsumptionSystem() { 
-            users = new List<User>();
+            users = new List<Associate>();
         }
 
-        public void Register(User u)
+        public void Register(Associate u)
         {
+            
             if(users.Contains(u))
             {
                 throw new Exception("There's a duplicate on the register");
@@ -22,14 +24,15 @@ namespace WACO
             else
             {
                 users.Add(u);
+                Console.WriteLine("The Associate has been added");
             }
         }
 
-        public void RegisterNewLecture(int ci, double lastLecture)
+        public void RegisterNewLecture(int ci, Lecture lastLecture)
         {
-            int aux = (int)Math.Truncate(lastLecture);
-            if(lastLecture >= users.Find(e => e.Ci == ci).LitersConsumed) { 
-                users.Find(e => e.Ci == ci).LitersConsumed=aux;
+            int aux = (int)Math.Truncate(lastLecture.AmountLectured);
+            if(lastLecture.AmountLectured >= users.Find(e => e.Ci == ci).LastLecture.AmountLectured) { 
+                users.Find(e => e.Ci == ci).LastLecture.AmountLectured=aux;
             }
             else
             {
