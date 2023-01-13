@@ -21,16 +21,40 @@ namespace WACO
             {
                 Console.Write(
             "\nchoose item to add:\n" +
-            "   1) Register an user.\n" +
-            "   2) Register a lecture\n" +
-            "   3) nothing else\n" +
+            "   1) Register an Associate.\n" +
+            "   2) Register a Lecture\n" +
+            "   3) Process Payment\n" +
+            "   4) Payment by Month\n"+
             "   Waco> ");
                 int opOrder = int.Parse(Console.ReadLine());
 
 
 
-                if (opOrder == 1) RegisterUser();
-                else if (opOrder == 2) RegisterLecture();
+                if (opOrder == 1)
+                {
+                    try
+                    {
+                        RegisterUser();
+                    }
+                    catch (Exception ex)
+                    {
+                        string message = string.Empty;
+                        message = ex.Message;
+                        Console.WriteLine(message);
+                    }
+                }
+                else if (opOrder == 2) {
+                    try { 
+                        RegisterLecture();
+                    }
+                    catch(Exception ex)
+                    {
+                        string message = string.Empty;
+                        message = ex.Message;
+                        Console.WriteLine(message);
+                    }
+                }
+
                 else if (opOrder == 3) break;
             }
         }
@@ -47,9 +71,7 @@ namespace WACO
             string lastName = Console.ReadLine();
             Console.Write("Associate Base lecture> ");
             double firstLecture = double.Parse(Console.ReadLine());
-            Lecture l = new Lecture(firstLecture);
-            
-            Associate u = new Associate(ci, name, lastName, l);
+            Associate u = new Associate(ci, name, lastName, firstLecture);
             wcs.Register(u);
         }
 
@@ -59,8 +81,8 @@ namespace WACO
             int ci = int.Parse(Console.ReadLine());
             Console.Write("Lecture Value> ");
             double lectureValue = double.Parse(Console.ReadLine());
-            Console.Write("Corresponding Month> ");
-            string month = Console.ReadLine();
+            //Console.Write("Corresponding Month> ");
+            //string month = Console.ReadLine();
             //Console.Write("Date Time> Year");
             //int Year = int.Parse(Console.ReadLine());
             //Console.Write("Date Time> Month");
@@ -74,10 +96,8 @@ namespace WACO
             //Console.Write("Date Time> Sec");
             //int Sec = int.Parse(Console.ReadLine());
             DateTime date = DateTime.UtcNow;
-
-            Lecture l = new Lecture(lectureValue,month,date);
-            wcs.RegisterNewLecture(ci, l);
-
+            wcs.RegisterNewLecture(new Lecture(ci,lectureValue));
+            //Lecture l = new Lecture(lectureValue, month, date);
         }
     }
 }

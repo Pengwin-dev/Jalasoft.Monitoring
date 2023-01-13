@@ -9,20 +9,20 @@ namespace WACO
         [TestMethod]
         public void UserRegistrationTest()
         {
-            Associate u = new Associate(6612, "Leonardo", "Da Vinci", new Lecture(20));
+            int ci = 51182703;
             WaterConsumptionSystem wcs = new WaterConsumptionSystem();
+            Associate u = new Associate(ci, "Leonardo", "Da Vinci", 20);
             wcs.Register(u);
-            Assert.AreEqual(wcs.users.Contains(u), true);
+            Assert.AreEqual(wcs.associates.Contains(u), true);
         }
         [TestMethod]
         public void RepeatedUserRegistrationException()
         {
-            Associate u = new Associate(6612, "Leonardo", "Da Vinci", new Lecture(20));
-
             WaterConsumptionSystem wcs = new WaterConsumptionSystem();
+            Associate u = new Associate(6612, "Leonardo", "Da Vinci", 20);
             wcs.Register(u);
             string message = string.Empty;
-            
+
             try
             {
                 wcs.Register(u);
@@ -36,31 +36,33 @@ namespace WACO
         }
 
         [TestMethod]
-        
+
         public void LectureRegistrationTest()
         {
-            Associate u = new Associate(6612, "Leonardo", "Da Vinci", new Lecture(20, "December", new DateTime(2022, 12, 12, 11, 6, 32)));
+            int ci = 51182703;
+            Associate u = new Associate(ci, "Leonardo", "Da Vinci", 20);
             WaterConsumptionSystem wcs = new WaterConsumptionSystem();
             wcs.Register(u);
-            Lecture lastLecture = new Lecture(35,"January", new DateTime(2023, 1, 12, 11, 6, 32));
-            wcs.RegisterNewLecture(6612, lastLecture);
-            Associate aux = wcs.users.Find(e => e.Ci == 6612);
-            Assert.AreEqual(aux.LastLecture.AmountLectured, 35) ;
+            Lecture lastLecture = new Lecture(ci, 35, "January", 2023, 1, 12, 11, 6);
+            wcs.RegisterNewLecture(lastLecture);
+            Associate aux = wcs.associates.Find(e => e.Ci == ci);
+            Assert.AreEqual(aux.LastLecture, 35);
         }
         [TestMethod]
 
         public void NewLectureCantBeLowerThanPreviousTest()
         {
-            Associate u = new Associate(6612, "Leonardo", "Da Vinci", new Lecture(20, "December", new DateTime(2022, 12, 12, 11, 6, 32)));
+            int ci = 51182703;
+            Associate u = new Associate(ci, "Leonardo", "Da Vinci", 20);
             WaterConsumptionSystem wcs = new WaterConsumptionSystem();
             wcs.Register(u);
-            Lecture lastLecture = new Lecture(15, "January", new DateTime(2023, 1, 12, 11, 6, 32));
+            Lecture lastLecture = new Lecture(ci, 19, "January", 2023, 1, 12, 11, 6);
             string message = string.Empty;
             try
             {
-                wcs.RegisterNewLecture(6612, lastLecture);
+                wcs.RegisterNewLecture(lastLecture);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 message = ex.Message;
             }
@@ -71,15 +73,25 @@ namespace WACO
 
         public void TruncateToIntWhenLectureIsDecimalTest()
         {
-            Associate u = new Associate(6612, "Leonardo", "Da Vinci", new Lecture(20, "December", new DateTime(2022, 12, 12, 11, 6, 32)));
+            int ci = 51182703;
+            Associate u = new Associate(ci, "Leonardo", "Da Vinci", 20);
             WaterConsumptionSystem wcs = new WaterConsumptionSystem();
             wcs.Register(u);
             double lastLectureAmount = 23.1;
-            Lecture lastLecture = new Lecture(lastLectureAmount, "January", new DateTime(2023, 1, 12, 11, 6, 32));
-            Associate aux = wcs.users.Find(e => e.Ci == 6612);
-            wcs.RegisterNewLecture(6612, lastLecture);
-            Assert.AreEqual(aux.LastLecture.AmountLectured, 23);
+            Lecture lastLecture = new Lecture(ci, lastLectureAmount, "January", 2023, 1, 12, 11, 6);
+            wcs.RegisterNewLecture(lastLecture);
+            Console.WriteLine(wcs.lectures.Find(e => e.UserCi == ci).AmountLectured);
+            Assert.AreEqual(wcs.lectures.Find(e => e.UserCi == ci).AmountLectured, 23);
         }
+     //   [TestMethod]
 
+        //public void CalculateDebtTest()
+        //{
+        //    Associate u = new Associate(6612, "Leonardo", "Da Vinci", new Lecture(20, "December", new DateTime(2022, 12, 12, 11, 6, 32)));
+        //    WaterConsumptionSystem wcs = new WaterConsumptionSystem();
+        //    wcs.Register(u);
+
+        //}
+    
     }
 }
