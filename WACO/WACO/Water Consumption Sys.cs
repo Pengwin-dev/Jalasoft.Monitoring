@@ -61,9 +61,28 @@ namespace WACO
             return ans;
         }
 
-        private void CalculateDebt(int ci,Lecture l)
-        {
 
+        public void CalculateLastPayment(int ci)
+        {
+            string period = getLastPaymentPeriod();
+            double lastAmount = substractLastLectures() *pricePerLiter;
+            Payment lastPayment = new Payment(ci,lastAmount,period);
+            
+        }
+
+        private string getLastPaymentPeriod()
+        {
+            
+        }
+
+        private int substractLastLectures()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int CheckLastPayment(int ci)
+        {
+            throw new NotImplementedException();
         }
     }
 }

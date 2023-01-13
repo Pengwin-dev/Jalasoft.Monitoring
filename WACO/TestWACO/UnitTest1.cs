@@ -83,15 +83,21 @@ namespace WACO
             Console.WriteLine(wcs.lectures.Find(e => e.UserCi == ci).AmountLectured);
             Assert.AreEqual(wcs.lectures.Find(e => e.UserCi == ci).AmountLectured, 23);
         }
-     //   [TestMethod]
+        
+        [TestMethod]
+        public void registerDebTest()
+        {
+            int ci = 51182703;
+            Associate u = new Associate(ci, "Leonardo", "Da Vinci", 23);
+            WaterConsumptionSystem wcs = new WaterConsumptionSystem();
+            wcs.Register(u);
+            double lastLectureAmount = 40;
+            Lecture newlastLectureAmount = new Lecture(ci, lastLectureAmount, "february",2023, 2, 12, 11, 6);
+            wcs.CalculateLastPayment(ci);
+            
+            // debt: 40-23 = 17 ; 17*2 =  34
+            Assert.AreEqual(34, wcs.CheckLastPayment(ci));
+        }
 
-        //public void CalculateDebtTest()
-        //{
-        //    Associate u = new Associate(6612, "Leonardo", "Da Vinci", new Lecture(20, "December", new DateTime(2022, 12, 12, 11, 6, 32)));
-        //    WaterConsumptionSystem wcs = new WaterConsumptionSystem();
-        //    wcs.Register(u);
-
-        //}
-    
     }
 }
