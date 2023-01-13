@@ -61,6 +61,20 @@ namespace WACO
             return ans;
         }
 
+        public Lecture SearchByPeriodAndCi(int CiToMatch, string PeriodToMatch)
+        {
+            Lecture ans = null;
+            foreach (Lecture l in lectures)
+            {
+                if (l.UserCi == CiToMatch && l.MonthPeriod == PeriodToMatch)
+                {
+                    ans = l;
+                    break;
+                }
+            }
+            return ans;
+        }
+
         private void CalculateDebt(int ci,Lecture l)
         {
 

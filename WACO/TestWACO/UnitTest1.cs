@@ -81,17 +81,8 @@ namespace WACO
             Lecture lastLecture = new Lecture(ci, lastLectureAmount, "January", 2023, 1, 12, 11, 6);
             wcs.RegisterNewLecture(lastLecture);
             Console.WriteLine(wcs.lectures.Find(e => e.UserCi == ci).AmountLectured);
-            Assert.AreEqual(wcs.lectures.Find(e => e.UserCi == ci).AmountLectured, 23);
+            Assert.AreEqual(23, wcs.SearchByPeriodAndCi(ci,"January").AmountLectured );
         }
-     //   [TestMethod]
-
-        //public void CalculateDebtTest()
-        //{
-        //    Associate u = new Associate(6612, "Leonardo", "Da Vinci", new Lecture(20, "December", new DateTime(2022, 12, 12, 11, 6, 32)));
-        //    WaterConsumptionSystem wcs = new WaterConsumptionSystem();
-        //    wcs.Register(u);
-
-        //}
-    
+       
     }
 }
